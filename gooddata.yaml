@@ -1,0 +1,8 @@
+profiles:
+  demo:
+    host: https://ach.internal.cloud.gooddata.com/
+    token: $GOODDATA_API_TOKEN
+    workspace_id: demo_ws
+    data_source_id: demo_ds
+source_dir: analytics
+default_profile: demo

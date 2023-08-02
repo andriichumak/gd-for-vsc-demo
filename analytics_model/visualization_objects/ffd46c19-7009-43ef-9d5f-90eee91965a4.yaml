@@ -1,0 +1,24 @@
+content:
+  buckets:
+    - items:
+        - measure:
+            definition:
+              measureDefinition:
+                aggregation: count
+                filters: []
+                item:
+                  identifier:
+                    id: customer_city
+                    type: attribute
+            format: '#,##0'
+            localIdentifier: 9909faa5cd394d7f836c91adbee6c40d
+            title: Count of Customer city
+      localIdentifier: measures
+  filters: []
+  properties: {}
+  sorts: []
+  version: '2'
+  visualizationUrl: local:table
+description: Test
+id: ffd46c19-7009-43ef-9d5f-90eee91965a4
+title: Test

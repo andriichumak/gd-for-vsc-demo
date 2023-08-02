@@ -1,0 +1,38 @@
+name: Python package
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+      - name: Set up NodeJS
+        uses: actions/setup-node@v3
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          npm ci
+      - name: Deploy
+        env:
+          # Replace host with your own
+          GOODDATA_HOST: https://ach.internal.cloud.gooddata.com/
+          # Define your token in GitHub secrets
+          GOODDATA_API_TOKEN: ${{secrets.GOODDATA_API_TOKEN}}
+          # This is a well known account, no need to hide it:
+          # https://www.gooddata.com/developers/cloud-native/doc/cloud/getting-started/connect-data/#ConnectData-SampleDatabase
+          SNOWFLAKE_ACCOUNT: gooddata
+          SNOWFLAKE_WAREHOUSE: GOODDATA_DEMO_WAREHOUSE
+          SNOWFLAKE_DBNAME: GOODDATA_DEMO_DATABASE
+          SNOWFLAKE_SCHEMA: ECOMMERCE_DEMO_SCHEMA
+          SNOWFLAKE_USER: gooddata_demo
+          SNOWFLAKE_PASSWORD: 4m62f7hSXAayAisZ
+        run: python ./scripts/deploy.py

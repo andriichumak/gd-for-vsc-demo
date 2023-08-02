@@ -1,0 +1,78 @@
+# A dataset is a logical object that represents a set of related facts, attributes, and attribute labels.
+# Datasets are basic organization units of a logical data model.
+# Read more about Datasets:
+# https://www.gooddata.com/developers/cloud-native/doc/cloud/model-data/concepts/dataset/
+
+type: dataset
+id: customer
+table_name: customer
+
+title: Customer
+description: Customer
+tags:
+  - Customer
+
+primary_key: customer_id
+
+fields:
+  customer_city:
+    type: attribute
+    source_column: customer_city
+    title: Customer city
+    description: Customer city
+    tags:
+      - Customer
+    labels:
+      geo__customer_city__city_pushpin_latitude:
+        source_column: geo__customer_city__city_pushpin_latitude
+        title: City pushpin latitude
+        description: City pushpin latitude
+        tags:
+          - Customer
+        value_type: GEO_LATITUDE
+      geo__customer_city__city_pushpin_longitude:
+        source_column: geo__customer_city__city_pushpin_longitude
+        title: City pushpin longitude
+        description: City pushpin longitude
+        tags:
+          - Customer
+        value_type: GEO_LONGITUDE
+  customer_country:
+    type: attribute
+    source_column: customer_country
+    title: Customer country
+    description: Customer country
+    tags:
+      - Customer
+  customer_email:
+    type: attribute
+    source_column: customer_email
+    title: Customer email
+    description: Customer email
+    tags:
+      - Customer
+  customer_id:
+    type: attribute
+    source_column: customer_id
+    title: Customer id
+    description: Customer id
+    tags:
+      - Customer
+    labels:
+      customer_name:
+        source_column: ls__customer_id__customer_name
+        title: Customer name
+        description: Customer name
+        tags:
+          - Customer
+  customer_state:
+    type: attribute
+    source_column: customer_state
+    title: Customer state
+    description: Customer state
+    tags:
+      - Customer
+
+references:
+  - dataset: customer_created_date
+    source_column: customer_created_date

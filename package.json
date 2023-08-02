@@ -1,0 +1,13 @@
+{
+  "name": "gd-for-vsc-demo",
+  "version": "1.0.0",
+  "description": "This project demostrates how you can set up CI/CD pipelines to deploy GoodData for VS Code project to production.",
+  "scripts": {
+    "deploy": "gd deploy -l debug"
+  },
+  "private": true,
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@gooddata/code-cli": "^0.1.0"
+  }
+}

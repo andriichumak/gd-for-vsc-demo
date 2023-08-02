@@ -1,0 +1,46 @@
+# A dataset is a logical object that represents a set of related facts, attributes, and attribute labels.
+# Datasets are basic organization units of a logical data model.
+# Read more about Datasets:
+# https://www.gooddata.com/developers/cloud-native/doc/cloud/model-data/concepts/dataset/
+
+type: dataset
+id: monthlyinventory
+table_name: monthlyinventory
+
+title: Monthlyinventory
+description: Monthlyinventory
+tags:
+  - Monthlyinventory
+
+primary_key: monthly_inventory_id
+
+fields:
+  monthly_inventory_id:
+    type: attribute
+    source_column: monthly_inventory_id
+    title: Monthly inventory id
+    description: Monthly inventory id
+    tags:
+      - Monthlyinventory
+  monthly_quantity_bom:
+    type: fact
+    source_column: monthly_quantity_bom
+    title: Monthly quantity bom
+    description: Monthly quantity bom
+    tags:
+      - Monthlyinventory
+  monthly_quantity_eom:
+    type: fact
+    source_column: monthly_quantity_eom
+    title: Monthly quantity eom
+    description: Monthly quantity eom
+    tags:
+      - Monthlyinventory
+
+references:
+  - dataset: date
+    source_column: date
+  - dataset: imventory_month
+    source_column: imventory_month
+  - dataset: product
+    source_column: product__product_id

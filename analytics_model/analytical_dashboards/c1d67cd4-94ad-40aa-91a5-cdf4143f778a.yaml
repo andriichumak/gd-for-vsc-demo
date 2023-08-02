@@ -1,0 +1,152 @@
+content:
+  filterContextRef:
+    identifier:
+      id: 3046e84f-b7bf-4c4b-bb31-f3fa9591b477
+      type: filterContext
+  layout:
+    sections:
+      - items:
+          - size:
+              xl:
+                gridWidth: 3
+            type: IDashboardLayoutItem
+            widget:
+              dateDataSet:
+                identifier:
+                  id: date
+                  type: dataset
+              description: ''
+              drills: []
+              ignoreDashboardFilters: []
+              insight:
+                identifier:
+                  id: 700d732d-67e1-4658-a6e0-c6b8edbb6d49
+                  type: visualizationObject
+              properties: {}
+              title: Net Sales
+              type: insight
+          - size:
+              xl:
+                gridWidth: 3
+            type: IDashboardLayoutItem
+            widget:
+              dateDataSet:
+                identifier:
+                  id: date
+                  type: dataset
+              description: ''
+              drills: []
+              ignoreDashboardFilters: []
+              insight:
+                identifier:
+                  id: 3ac5e106-b43e-4c87-9ef0-9315e02282bd
+                  type: visualizationObject
+              properties: {}
+              title: Net Orders
+              type: insight
+          - size:
+              xl:
+                gridWidth: 3
+            type: IDashboardLayoutItem
+            widget:
+              dateDataSet:
+                identifier:
+                  id: date
+                  type: dataset
+              description: ''
+              drills: []
+              ignoreDashboardFilters: []
+              insight:
+                identifier:
+                  id: dc8575f5-27e5-44be-a2dc-23d54b7777e7
+                  type: visualizationObject
+              properties: {}
+              title: Active Customers
+              type: insight
+          - size:
+              xl:
+                gridWidth: 3
+            type: IDashboardLayoutItem
+            widget:
+              dateDataSet:
+                identifier:
+                  id: date
+                  type: dataset
+              description: ''
+              drills: []
+              ignoreDashboardFilters: []
+              insight:
+                identifier:
+                  id: 0c7ac154-1766-4d54-ba2b-b6f6913a59dd
+                  type: visualizationObject
+              properties: {}
+              title: Sales per Customer
+              type: insight
+        type: IDashboardLayoutSection
+      - items:
+          - size:
+              xl:
+                gridWidth: 6
+            type: IDashboardLayoutItem
+            widget:
+              dateDataSet:
+                identifier:
+                  id: date
+                  type: dataset
+              description: ''
+              drills: []
+              ignoreDashboardFilters: []
+              insight:
+                identifier:
+                  id: 603bbd58-ea50-4607-ad20-418bd95c06c8
+                  type: visualizationObject
+              properties: {}
+              title: Top Sellers
+              type: insight
+          - size:
+              xl:
+                gridWidth: 6
+            type: IDashboardLayoutItem
+            widget:
+              dateDataSet:
+                identifier:
+                  id: date
+                  type: dataset
+              description: ''
+              drills: []
+              ignoreDashboardFilters: []
+              insight:
+                identifier:
+                  id: 7b49dbdb-f9ab-41dd-9cb4-cd13627d67c3
+                  type: visualizationObject
+              properties: {}
+              title: Money Makers
+              type: insight
+        type: IDashboardLayoutSection
+      - items:
+          - size:
+              xl:
+                gridHeight: 35
+                gridWidth: 12
+            type: IDashboardLayoutItem
+            widget:
+              dateDataSet:
+                identifier:
+                  id: date
+                  type: dataset
+              description: ''
+              drills: []
+              ignoreDashboardFilters: []
+              insight:
+                identifier:
+                  id: 65120fa4-2805-4f70-b576-01d138117cf4
+                  type: visualizationObject
+              properties: {}
+              title: Product detail
+              type: insight
+        type: IDashboardLayoutSection
+    type: IDashboardLayout
+  version: '2'
+description: ''
+id: c1d67cd4-94ad-40aa-91a5-cdf4143f778a
+title: 4. Products
